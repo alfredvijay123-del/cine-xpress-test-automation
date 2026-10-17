@@ -20,7 +20,7 @@ public class LoginPage {
 	By eyeButton = By.cssSelector("button[type='button']");
 	
 	By createAccountButton  = By.xpath("//button[@type='submit' and normalize-space()='Create Account']");
-//	By signInButton = By.xpath("//button[normalize-space()='Sign In']");
+	By signInButton = By.xpath("//button[normalize-space()='Sign In']");
 	By loadMoreButton =By.xpath("//button[normalize-space()='Load More']");
 	
 	public LoginPage(WebDriver dreiver) {
@@ -46,9 +46,11 @@ public class LoginPage {
 		public void clickEyeButton() {
 			wait.until(ExpectedConditions.elementToBeClickable(eyeButton)).click();
 		}
-//	public void clickSignIn() {
-//		driver.findElement(signInButton).click();
-//	}
+		
+	public void clickSignIn() {
+		wait.until(ExpectedConditions.elementToBeClickable(signInButton)).click();
+	}
+	
 		public void clickCreateAccount() {
 			wait.until(ExpectedConditions.elementToBeClickable(createAccountButton)).click();
 		}

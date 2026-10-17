@@ -17,19 +17,23 @@ public class LoginTest {
 //		Login page(sign up)
 		loginpage.clickSignuplinks(); 
 		loginpage.enterName("AlfredVijay");
-		loginpage.enterEmail("just19@yopmail.com");
+		loginpage.enterEmail("just20@yopmail.com");
 		loginpage.enterPassword("KL52C1680");
 		
 		loginpage.clickEyeButton();
 		Thread.sleep(2000);
 		loginpage.clickEyeButton();
 		
-		loginpage.clickCreateAccount();          //Click Signup
+		loginpage.clickCreateAccount();  //Click Signup
 		
-		loginpage.clickLoadMore();     //Select city pop-up
 		
 		CitySelectPage citypage = new CitySelectPage(Driver);
-		citypage.searchCity();
+		citypage.clickLoadMore();    //Select city pop-up
+		Thread.sleep(1500);
+		
+//		CitySelectPage citypage = new CitySelectPage(Driver);
+		citypage.searchCity("Kozhikode");
+		citypage.selectCity("Kozhikode");
 //		
 //		Login page(Sign in)
 		

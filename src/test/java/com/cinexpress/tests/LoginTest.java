@@ -17,14 +17,14 @@ public class LoginTest {
 //		Login page(sign up)
 		loginpage.clickSignuplinks(); 
 		loginpage.enterName("AlfredVijay");
-		loginpage.enterEmail("just9@yopmail.com");
+		loginpage.enterEmail("just19@yopmail.com");
 		loginpage.enterPassword("KL52C1680");
 		
 		loginpage.clickEyeButton();
 		Thread.sleep(2000);
 		loginpage.clickEyeButton();
 		
-		loginpage.clickSignup();        //Click Signup
+		loginpage.clickCreateAccount();          //Click Signup
 		
 		loginpage.clickLoadMore();     //Select city pop-up
 		

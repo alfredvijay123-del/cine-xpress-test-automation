@@ -16,6 +16,8 @@ public class NavBarPage {
 	
 	By searchField = By.cssSelector("input[placeholder='Search movies...']");
 	
+	By firstMovieResult = By.cssSelector("div.absolute.overflow-y-auto div.cursor-pointer");
+	
 	public NavBarPage (WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -31,9 +33,12 @@ public class NavBarPage {
 		box.sendKeys(movie);
 	}
 	
-	public void pressEnter() {
-		driver.findElement(searchField).sendKeys(Keys.ENTER);
-		
+//	public void pressEnter() {
+//		driver.findElement(searchField).sendKeys(Keys.ENTER);
+//		
+//	}
+	public void selectMovie() {
+		wait.until(ExpectedConditions.elementToBeClickable(firstMovieResult)).click();
 	}
-	
-}
+	}
+

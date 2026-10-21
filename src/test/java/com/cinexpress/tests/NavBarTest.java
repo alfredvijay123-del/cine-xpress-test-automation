@@ -37,7 +37,8 @@ public class NavBarTest {
 			
 			System.out.println("Search bar displayed : " + navBar.isSearchBarDisplayed());
 			navBar.enterSearch(movie);
-			navBar.pressEnter();
+			navBar.selectMovie();
+//			navBar.pressEnter();
 			
 			Thread.sleep(5000);
 			System.out.println("URL after search:" + driver.getCurrentUrl());

@@ -27,24 +27,20 @@ public class NavBarTest {
 			loginPage.enterPassword("cinixpress123");
 			loginPage.clickSignIn();
 			
-//			CitySelectPage cityPage = new CitySelectPage(driver);
-//			cityPage.clickLoadMore();
-//			Thread.sleep(1500);
-//			cityPage.selectCity("Kozhikode");
-//			cityPage.selectCity(movie);  // search box-il "Kozhikode" type cheyyunnu
-//			cityPage.selectCity("Kozhikode");  //list-il vanna Kozhikode card-il click cheyyunnu
-//			Thread.sleep(3000);
+
 			
 			System.out.println("Search bar displayed : " + navBar.isSearchBarDisplayed());
 			navBar.enterSearch(movie);
 			navBar.selectMovie();
+			Thread.sleep(3000);
+			navBar.ciniXperssLogo();
 //			navBar.pressEnter();
 			
 			Thread.sleep(5000);
 			System.out.println("URL after search:" + driver.getCurrentUrl());
 			
 		}finally {
-			Thread.sleep(15000);     // 15 second
+			Thread.sleep(5000);     // 15 second
 			driver.quit();
 		}
 	}

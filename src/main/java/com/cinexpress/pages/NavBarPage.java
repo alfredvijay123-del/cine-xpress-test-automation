@@ -18,6 +18,8 @@ public class NavBarPage {
 	
 	By firstMovieResult = By.cssSelector("div.absolute.overflow-y-auto div.cursor-pointer");
 	
+	By ciniXpressButton = By.cssSelector("header div.shrink-0.cursor-pointer");
+	
 	public NavBarPage (WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -39,6 +41,10 @@ public class NavBarPage {
 //	}
 	public void selectMovie() {
 		wait.until(ExpectedConditions.elementToBeClickable(firstMovieResult)).click();
+	}
+	
+	public void ciniXperssLogo() {
+		wait.until(ExpectedConditions.elementToBeClickable(ciniXpressButton)).click();
 	}
 	}
 

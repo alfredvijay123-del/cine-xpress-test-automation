@@ -13,6 +13,7 @@ public class CitySelectPage {
 	WebDriverWait wait;
 	
 	By loadMoreButton = By.xpath("//button[normalize-space()='Load More']");
+	By closeButton = By.cssSelector("button[aria-label='Close city selection']");
 	By citySearchField = By.cssSelector("input[placeholder='Search city...']");
 	
 	public CitySelectPage(WebDriver driver) {
@@ -23,7 +24,10 @@ public class CitySelectPage {
 	public void clickLoadMore() {
 		wait.until(ExpectedConditions.elementToBeClickable(loadMoreButton)).click();
 	}
-	
+		
+	public void clickClose() {
+		wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
+	}
 	private By cityCard(String city) {
 		return By.xpath("(//*[normalize-space()='" + city + "'])[1]");
 	}

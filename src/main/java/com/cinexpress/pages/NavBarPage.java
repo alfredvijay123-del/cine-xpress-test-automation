@@ -20,6 +20,10 @@ public class NavBarPage {
 	
 	By ciniXpressButton = By.cssSelector("header div.shrink-0.cursor-pointer");
 	
+	By cityButton =By.cssSelector("header div.relative > button.rounded-full");
+	
+	By moreCitiesButton = By.xpath("//button[contains(normalize-space(),'More Cities')]");
+	
 	public NavBarPage (WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -45,6 +49,15 @@ public class NavBarPage {
 	
 	public void ciniXperssLogo() {
 		wait.until(ExpectedConditions.elementToBeClickable(ciniXpressButton)).click();
+	}
+	
+	public void clickCityButton() {
+		wait.until(ExpectedConditions.elementToBeClickable(cityButton)).click();
+	}
+	
+	public void clickMoreCities() {
+		wait.until(ExpectedConditions.elementToBeClickable(moreCitiesButton)).click();
+		
 	}
 	}
 

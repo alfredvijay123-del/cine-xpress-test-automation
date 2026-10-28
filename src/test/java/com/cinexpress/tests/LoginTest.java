@@ -15,23 +15,23 @@ public class LoginTest {
 		LoginPage loginpage = new LoginPage(Driver);  // Driverine LoginPage.java yilott Access cheyyunnu
 		 
 //		Login page(sign up)
-//		loginpage.clickSignuplinks(); 
-//		loginpage.enterName("AlfredVijay");
-//		loginpage.enterEmail("just20@yopmail.com");
-//		loginpage.enterPassword("KL52C1680");
-//		
-//		loginpage.clickEyeButton();
-//		Thread.sleep(2000);
-//		loginpage.clickEyeButton();
-//		
-//		loginpage.clickCreateAccount();  //Click Signup
+		loginpage.clickSignuplinks(); 
+		loginpage.enterName("AlfredVijay");
+		loginpage.enterEmail("signup@yopmail.com");
+		loginpage.enterPassword("KL52C1680");
+		
+		loginpage.clickEyeButton();
+		Thread.sleep(2000);
+		loginpage.clickEyeButton();
+		
+		loginpage.clickCreateAccount();  //Click Signup
 //		
 		
 //		Login page(Sign in)
 		
-		loginpage.enterEmail("cinixpress@yopmail.com");
-		loginpage.enterPassword("cinixpress123");
-		loginpage.clickSignIn();
+//		loginpage.enterEmail("cinixpress@yopmail.com");
+//		loginpage.enterPassword("cinixpress123");
+//		loginpage.clickSignIn();
 		
 		CitySelectPage citypage = new CitySelectPage(Driver);
 		citypage.clickLoadMore();    //Select city pop-up

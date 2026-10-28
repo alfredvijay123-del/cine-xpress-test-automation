@@ -30,12 +30,16 @@ public class CitySelectTest {
 			loginPage.enterPassword(password);
 			loginPage.clickCreateAccount();
 			
-			System.out.println("Popup displayed:" + cityPage.isPopupDisplayed());
-			cityPage.clickLoadMore();
-			Thread.sleep(1500);
-			cityPage.searchCity(cityName);
-			System.out.println("City visible: " + cityPage.isCityDisplayed(cityName));
-			cityPage.selectCity(cityName);
+			Thread.sleep(2000);
+			System.out.println("Popup displayed:" + driver.getCurrentUrl());
+			cityPage.clickClose();
+			Thread.sleep(3000);
+//			System.out.println("Popup displayed:" + cityPage.isPopupDisplayed());
+//			cityPage.clickLoadMore();
+//			Thread.sleep(1500);
+//			cityPage.searchCity(cityName);
+//			System.out.println("City visible: " + cityPage.isCityDisplayed(cityName));
+//			cityPage.selectCity(cityName);
 			
 			Thread.sleep(3000);
 			System.out.println("URL after city select: " + driver.getCurrentUrl());

@@ -3,6 +3,7 @@ package com.cinexpress.tests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.cinexpress.pages.CitySelectPage;
 //import com.cinexpress.pages.CitySelectPage;
 import com.cinexpress.pages.LoginPage;
 import com.cinexpress.pages.NavBarPage;
@@ -21,13 +22,26 @@ public class NavBarTest {
 			driver.get("https://cine-xpress.vercel.app/");
 			
 			LoginPage loginPage = new LoginPage(driver);
+			
 			NavBarPage navBar = new NavBarPage(driver);
+			
+			CitySelectPage citypage = new CitySelectPage(driver);
 			
 			loginPage.enterEmail("cinixpress@yopmail.com");
 			loginPage.enterPassword("cinixpress123");
 			loginPage.clickSignIn();
 			
-
+			citypage.clickClose();
+			Thread.sleep(1500);
+			
+			navBar.clickCityButton();
+			navBar.clickMoreCities();
+			
+			citypage.clickLoadMore();
+			Thread.sleep(1500);
+			citypage.searchCity("Kozhikode");
+			citypage.selectCity("Kozhikode");
+			Thread.sleep(1500);
 			
 			System.out.println("Search bar displayed : " + navBar.isSearchBarDisplayed());
 			navBar.enterSearch(movie);

@@ -17,7 +17,7 @@ public class LoginTest {
 //		Login page(sign up)
 		loginpage.clickSignuplinks(); 
 		loginpage.enterName("AlfredVijay");
-		loginpage.enterEmail("signup@yopmail.com");
+		loginpage.enterEmail("signupp@yopmail.com");
 		loginpage.enterPassword("KL52C1680");
 		
 		loginpage.clickEyeButton();
@@ -33,16 +33,16 @@ public class LoginTest {
 //		loginpage.enterPassword("cinixpress123");
 //		loginpage.clickSignIn();
 		
-		CitySelectPage citypage = new CitySelectPage(Driver);
-		citypage.clickLoadMore();    //Select city pop-up
-		Thread.sleep(1500);
-		
 //		CitySelectPage citypage = new CitySelectPage(Driver);
-		citypage.searchCity("Kozhikode");
-		citypage.selectCity("Kozhikode");
+//		citypage.clickLoadMore();    //Select city pop-up
+//		Thread.sleep(1500);
 //		
+////		CitySelectPage citypage = new CitySelectPage(Driver);
+//		citypage.searchCity("Kozhikode");
+//		citypage.selectCity("Kozhikode");
+////		
 		
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		Driver.quit();
 	}
 }

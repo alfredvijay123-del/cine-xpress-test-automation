@@ -24,6 +24,8 @@ public class NavBarPage {
 	
 	By moreCitiesButton = By.xpath("//button[contains(normalize-space(),'More Cities')]");
 	
+	By profileButton = By.xpath("//*[@id=\"root\"]/div/header/div/div[3]/div[2]/img");
+	
 	public NavBarPage (WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));

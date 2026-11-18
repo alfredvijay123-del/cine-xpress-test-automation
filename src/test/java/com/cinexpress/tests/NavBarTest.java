@@ -15,6 +15,7 @@ public class NavBarTest {
 		String email = "cinixpress@yopmail.com";
 		String passWord = "cinixpress123";
 		String movie = "Vaazha";
+		String newCity = "Kochi";
 		
 		WebDriver driver = new ChromeDriver();
 		try {
@@ -27,28 +28,34 @@ public class NavBarTest {
 			
 			CitySelectPage citypage = new CitySelectPage(driver);
 			
+//			Login
 			loginPage.enterEmail("cinixpress@yopmail.com");
 			loginPage.enterPassword("cinixpress123");
 			loginPage.clickSignIn();
+			Thread.sleep(3000);
 			
-			citypage.clickClose();
-			Thread.sleep(1500);
+//			citypage.clickClose();
+//			Thread.sleep(1500);
 			
-			navBar.clickCityButton();
-			navBar.clickMoreCities();
-			
-			citypage.clickLoadMore();
-			Thread.sleep(1500);
-			citypage.searchCity("Kozhikode");
-			citypage.selectCity("Kozhikode");
-			Thread.sleep(1500);
-			
+//			Movie Searching
 			System.out.println("Search bar displayed : " + navBar.isSearchBarDisplayed());
 			navBar.enterSearch(movie);
 			navBar.selectMovie();
 			Thread.sleep(3000);
-			navBar.ciniXperssLogo();
-//			navBar.pressEnter();
+			
+			navBar.ciniXperssLogo();  //Back To home page
+			
+			
+//			Changing City
+			navBar.clickCityButton();
+			navBar.clickMoreCities();
+			citypage.clickLoadMore();
+			Thread.sleep(1500);
+			citypage.searchCity("Kochi");    //city type
+			citypage.selectCity("Kochi");    //city click
+
+			
+
 			
 			Thread.sleep(5000);
 			System.out.println("URL after search:" + driver.getCurrentUrl());

@@ -29,7 +29,7 @@ public class CitySelectPage {
 		wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
 	}
 	private By cityCard(String city) {
-		return By.xpath("(//*[normalize-space()='" + city + "'])[1]");
+		return By.xpath("//div[contains(@class,'z-[9999]')]//*[normalize-space()='" + city + "']");
 	}
 	
 	public boolean isPopupDisplayed() {

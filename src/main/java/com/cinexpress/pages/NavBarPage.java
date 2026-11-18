@@ -24,7 +24,7 @@ public class NavBarPage {
 	
 	By moreCitiesButton = By.xpath("//button[contains(normalize-space(),'More Cities')]");
 	
-	By profileButton = By.xpath("//*[@id=\"root\"]/div/header/div/div[3]/div[2]/img");
+	By profileButton = By.xpath("//*[@id='root']/div/header/div/div[3]/div[2]/img");
 	
 	public NavBarPage (WebDriver driver) {
 		this.driver = driver;
@@ -59,7 +59,10 @@ public class NavBarPage {
 	
 	public void clickMoreCities() {
 		wait.until(ExpectedConditions.elementToBeClickable(moreCitiesButton)).click();
-		
+	}
+	
+	public void clickProfileButton() {
+	    wait.until(ExpectedConditions.elementToBeClickable(profileButton)).click();
 	}
 	}
 

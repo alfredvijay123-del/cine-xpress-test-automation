@@ -55,7 +55,7 @@ public class NavBarTest {
 			citypage.selectCity("Kochi");    //city click
 
 			
-
+			navBar.clickProfileButton();
 			
 			Thread.sleep(5000);
 			System.out.println("URL after search:" + driver.getCurrentUrl());

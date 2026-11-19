@@ -53,8 +53,10 @@ public class NavBarTest {
 			Thread.sleep(1500);
 			citypage.searchCity("Kochi");    //city type
 			citypage.selectCity("Kochi");    //city click
-
 			
+			
+//			Clicking Profile
+			Thread.sleep(4000);
 			navBar.clickProfileButton();
 			
 			Thread.sleep(5000);

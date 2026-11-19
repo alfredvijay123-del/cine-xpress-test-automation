@@ -61,7 +61,7 @@ public class NavBarPage {
 		wait.until(ExpectedConditions.elementToBeClickable(moreCitiesButton)).click();
 	}
 	
-	public void clickProfileButton() {
+	public void clickProfile() {
 	    wait.until(ExpectedConditions.elementToBeClickable(profileButton)).click();
 	}
 	}

@@ -57,7 +57,7 @@ public class NavBarTest {
 			
 //			Clicking Profile
 			Thread.sleep(4000);
-			navBar.clickProfileButton();
+			navBar.clickProfile();
 			
 			Thread.sleep(5000);
 			System.out.println("URL after search:" + driver.getCurrentUrl());

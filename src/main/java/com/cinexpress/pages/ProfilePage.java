@@ -2,7 +2,10 @@ package com.cinexpress.pages;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProfilePage {
@@ -10,12 +13,36 @@ public class ProfilePage {
 	WebDriver driver;
 	WebDriverWait wait;
 	
+	By BackHomeButton = By.xpath("//*[@id=\"root\"]/div/div/button");
+	By FullNameBox = By.xpath("//*[@id=\"name\"]");
+	By PhoneField = By.cssSelector("#phone");
+	By SaveChangesBtn = By.xpath("//*[@id=\"root\"]/div/div/div/div[2]/div/form/button");
+	
 	public ProfilePage (WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-		// TODO Auto-generated method stub
+	}
 	
+	public void clickBackHome() {
+		wait.until(ExpectedConditions.elementToBeClickable(BackHomeButton)).click();
 	}
 
+	public void changeName(String name) {
+		WebElement box = wait.until(ExpectedConditions.elementToBeClickable(FullNameBox));
+		box.click();
+		box.clear();
+		box.sendKeys(name);
+	}
+	
+	public void enterPhone(String phone) {
+		WebElement box = wait.until(ExpectedConditions.elementToBeClickable(PhoneField));
+		box.click();
+		box.clear();
+		box.sendKeys(phone);
+	}
+	
+	public void clickSaveChanges() {
+		wait.until(ExpectedConditions.elementToBeClickable(SaveChangesBtn)).click();
+		
+	}
 }

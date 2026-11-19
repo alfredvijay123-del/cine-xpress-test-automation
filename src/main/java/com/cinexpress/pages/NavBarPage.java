@@ -3,7 +3,7 @@ package com.cinexpress.pages;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+//import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -24,7 +24,8 @@ public class NavBarPage {
 	
 	By moreCitiesButton = By.xpath("//button[contains(normalize-space(),'More Cities')]");
 	
-	By profileButton = By.xpath("//*[@id='root']/div/header/div/div[3]/div[2]/img");
+//	By profileButton = By.xpath("//*[@id='root']/div/header/div/div[3]/div[2]/img");
+	By profileButton    = By.cssSelector("img[alt='Profile']");
 	
 	public NavBarPage (WebDriver driver) {
 		this.driver = driver;
@@ -61,8 +62,11 @@ public class NavBarPage {
 		wait.until(ExpectedConditions.elementToBeClickable(moreCitiesButton)).click();
 	}
 	
+//	public void clickProfileButton() {
+//	    wait.until(ExpectedConditions.elementToBeClickable(profileButton)).click();
+//	}
 	public void clickProfile() {
-	    wait.until(ExpectedConditions.elementToBeClickable(profileButton)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(profileButton)).click();
 	}
 	}
 

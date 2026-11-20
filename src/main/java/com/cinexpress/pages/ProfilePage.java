@@ -16,7 +16,11 @@ public class ProfilePage {
 	By BackHomeButton = By.xpath("//*[@id=\"root\"]/div/div/button");
 	By FullNameBox = By.xpath("//*[@id=\"name\"]");
 	By PhoneField = By.cssSelector("#phone");
+//	By ProfileImg = By.cssSelector("input[type='file'");
 	By SaveChangesBtn = By.xpath("//*[@id=\"root\"]/div/div/div/div[2]/div/form/button");
+	By MyBookingBtn = By.xpath("//*[@id=\"root\"]/div/div/div/div[1]/div[3]/button[1]");
+	By LogoutBtn = By.xpath("//*[@id=\"root\"]/div/div/div/div[1]/div[3]/button[2]");
+
 	
 	public ProfilePage (WebDriver driver) {
 		this.driver = driver;
@@ -41,8 +45,22 @@ public class ProfilePage {
 		box.sendKeys(phone);
 	}
 	
+	
+//	public void uploadProfileImg(String filePath) {
+//		driver.findElement(ProfileImg).sendKeys(filePath);
+//	}
+	
+	
 	public void clickSaveChanges() {
 		wait.until(ExpectedConditions.elementToBeClickable(SaveChangesBtn)).click();
+	}
+	
+	public void clickMyBookings() {
+		wait.until(ExpectedConditions.elementToBeClickable(MyBookingBtn)).click();
+	}
+	
+	public void clickLogout() {
+		wait.until(ExpectedConditions.elementToBeClickable(LogoutBtn)).click();
 		
 	}
 }

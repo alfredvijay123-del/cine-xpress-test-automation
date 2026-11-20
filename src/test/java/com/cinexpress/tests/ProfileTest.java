@@ -46,7 +46,27 @@ public class ProfileTest {
 			
 			profile.changeName(newName);
 			profile.enterPhone(phone);
+			Thread.sleep(2000);
+			
+//			String imgPath = "C:\\Users\\ALFRED\\Pictures\\CAR\\IMG-20261025-WA0064.jpg";
+//			profile.uploadProfileImg(imgPath);
+//			Thread.sleep(2000);
+//			
 			profile.clickSaveChanges();
+			
+			profile.clickMyBookings();
+			Thread.sleep(2000);
+			System.out.println("Booking URL: " + driver.getCurrentUrl());
+			Thread.sleep(5000);
+			navBarPage.ciniXperssLogo();
+			Thread.sleep(2000);
+			
+			navBarPage.clickProfile();
+			Thread.sleep(2000);
+			
+			profile.clickLogout();
+			Thread.sleep(2000);
+			System.out.println("After logout URL: " + driver.getCurrentUrl());
 			
 			Thread.sleep(3000);
 			System.out.println("Saved URL: " + driver.getCurrentUrl());
